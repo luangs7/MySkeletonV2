@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MySkeleton v2</string>
+
+    <string name="empty">Todos os campos são obrigatórios.</string>
+    <string name="html">Todos os campos são obrigatórios.</string>
+
+    <string name="error404">Sem dados cadastrados até o momento.</string>
+    <string name="error401">Autenticação inválida.</string>
+    <string name="error500">Ocorreu um erro. Por favor, verifique seus dados e tente novamente.</string>
+    <string name="errorGps">Verifique seu GPS!</string>
+    <string name="noConnect">Problema de conexão</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="signup">Faça já o seu  <b>Pré cadastro!</b></string>
+    <string name="loginError">Acesso não autorizado. Verifique se o endereço de e-mail e senha correspondem e tente novamente</string>
+    <!--form message and some alerts-->
+    <string name="cpfInvalido">CPF/CNPJ é inválido.</string>
+    <string name="emptyAgenda">Agenda vazia!</string>
+    <string name="cpfInvalidate">CPF inválido!</string>
+    <string name="formError">Todos os campos devem ser preenchidos!</string>
+    <string name="zipcodeError">Pesquise o CEP para validar!</string>
+    <string name="passError">Sua senha deve ter entre 06 a 32 caracteres!</string>
+    <string name="invalidEmail">Email inválido!</string>
+    <string name="forgetPass">"Dentro de alguns minutos, você receberá a senha no e-mail informado.</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

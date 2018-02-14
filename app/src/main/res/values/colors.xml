@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3e3e3e</color>
+    <color name="colorPrimaryDark">#a8a8a8</color>
+    <color name="colorAccent">#c2c2c2</color>
+    <color name="myblack">#000000</color>
+    <color name="tabSelected">#80cd325c</color>
+    <color name="buttonLogin">#d94a6f</color>
+    <color name="buttonLoginPressed">#80d94a6f</color>
+    <color name="btnCadastro">#53a2ab</color>
+    <color name="btnCadastroPressed">#8053a2ab</color>
+    <color name="buttonFb">#3a559f</color>
+    <color name="buttonFbPressed">#803a559f</color>
+    <color name="titlecolor">#313131</color>
+    <color name="drawer">#000</color>
+    <color name="gray">#a8a8a8</color>
+    <color name="antiflash_white">#F3F2F4</color>
+    <color name="chateaugreen">#37B24F</color>
+    <color name="check">#8db22f</color>
+
+    <color name="start_active">#ffc600</color>
+    <color name="start_desactive">#c1c1c1</color>
+</resources>

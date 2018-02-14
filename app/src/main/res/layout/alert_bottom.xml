@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textSize="16sp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id augue ex. Maecenas vulputate turpis ac faucibus blandit. Phasellus venenatis magna et mi venenatis, ac sodales leo iaculis. Suspendisse luctus quis nisi non accumsan. Nullam tempus nisi neque, ullamcorper pellentesque quam accumsan eget."
+           />
+
+        <!--<TextView-->
+            <!--android:id="@+id/submit"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:text="Enviar"-->
+            <!--android:textAlignment="textEnd"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold" />-->
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/positive"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/button_rounded"
+            android:elevation="4dp"
+            android:text="Confirmar"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+</LinearLayout>

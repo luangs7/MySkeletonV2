@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1080552584659",
+    "firebase_url": "https://myskeleton-ce75b.firebaseio.com",
+    "project_id": "myskeleton-ce75b",
+    "storage_bucket": "myskeleton-ce75b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080552584659:android:c7451543d71c020f",
+        "android_client_info": {
+          "package_name": "br.com.luan.myskeletonv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080552584659-l06evl0cck9rnf62sv78a976cj118qe6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX1VN1lgPrwURWl_EVsFYXWN8hvV9Oo-Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
