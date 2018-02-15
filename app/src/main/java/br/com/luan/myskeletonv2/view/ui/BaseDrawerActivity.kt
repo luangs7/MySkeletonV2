@@ -1,12 +1,12 @@
 package br.com.luan.myskeletonv2.view.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.view.MenuItem
 
 import br.com.luan.myskeletonv2.R
+import br.com.luan.myskeletonv2.view.ui.Products.ProductsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 open class BaseDrawerActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {

@@ -48,8 +48,8 @@
         </service>
 
         <activity android:name=".view.ui.BaseDrawerActivity" />
-        <activity android:name=".view.ui.ShowImageActivity" />
-        <activity android:name=".view.ui.ProductsActivity"></activity>
+        <activity android:name=".view.ui.Products.ShowImageActivity" />
+        <activity android:name=".view.ui.Products.ProductsActivity"></activity>
     </application>
 
 </manifest>

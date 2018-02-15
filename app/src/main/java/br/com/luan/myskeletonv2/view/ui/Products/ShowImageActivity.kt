@@ -1,13 +1,10 @@
-package br.com.luan.myskeletonv2.view.ui
+package br.com.luan.myskeletonv2.view.ui.Products
 
 import android.app.DownloadManager
 import android.content.Context
 import android.net.Uri
-import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
-import android.support.v4.view.MenuItemCompat
 import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import android.util.Log
@@ -18,6 +15,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.data.model.Product
+import br.com.luan.myskeletonv2.view.ui.BaseActivity
 import com.github.chrisbanes.photoview.PhotoView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.content_main.*
@@ -42,7 +40,7 @@ class ShowImageActivity : BaseActivity() {
 
         viewPager = findViewById(R.id.viewPager) as ViewPager
 
-        viewPager!!.adapter = SamplePagerAdapter(product.images!!,this)
+        viewPager!!.adapter = SamplePagerAdapter(product.images!!, this)
 
     }
 

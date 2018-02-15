@@ -10,10 +10,35 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#8f8d8e"
+        android:background="#ffffff"
         style="@style/AppTheme.Toolbar"
         android:elevation="3dp"
         app:titleTextColor="@android:color/white"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_smiling_skeleton"
+            android:id="@+id/imageView2"
+            android:layout_marginTop="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to my Skeleton application! \nCheck the menu navigation to see some features."
+            android:layout_below="@+id/imageView2"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
 
 </LinearLayout>

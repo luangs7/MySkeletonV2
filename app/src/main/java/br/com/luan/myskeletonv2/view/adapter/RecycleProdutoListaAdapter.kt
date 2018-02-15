@@ -6,9 +6,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Handler
 import android.support.v4.app.ActivityOptionsCompat
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v4.view.ViewPager
-import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -17,14 +15,13 @@ import android.widget.*
 import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.data.model.Product
 import br.com.luan.myskeletonv2.extras.RecyclerViewOnClickListenerHack
-import br.com.luan.myskeletonv2.view.ui.ShowImageActivity
+import br.com.luan.myskeletonv2.view.ui.Products.ShowImageActivity
 
 
 import com.squareup.picasso.Picasso
 
 
 import me.relex.circleindicator.CircleIndicator
-import org.jetbrains.anko.longToast
 import java.util.*
 import kotlin.collections.ArrayList
 

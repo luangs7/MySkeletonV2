@@ -1,11 +1,7 @@
-package br.com.luan.myskeletonv2.view.ui
+package br.com.luan.myskeletonv2.view.ui.Products
 
-import android.content.Intent
-import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
@@ -17,7 +13,7 @@ import br.com.luan.myskeletonv2.data.request.ProductRequestActivity
 import br.com.luan.myskeletonv2.extras.EndlessRecyclerViewScrollListener
 import br.com.luan.myskeletonv2.extras.RecyclerViewOnClickListenerHack
 import br.com.luan.myskeletonv2.view.adapter.RecycleProdutoListaAdapter
-import br.com.luan.myskeletonv2.view.adapter.SliderMainAdapter
+import br.com.luan.myskeletonv2.view.ui.BaseDrawerActivity
 import kotlinx.android.synthetic.main.activity_products.*
 
 class ProductsActivity : BaseDrawerActivity(), ProductRequestActivity.RequestListener {
