@@ -1,8 +1,9 @@
-package br.com.luan.myskeletonv2.data.retrofit
+package br.com.squarebits.myskeletonv2.data.retrofit
 
 import android.content.Context
 import br.com.luan.myskeletonv2.extras.CollectionEmptySerializer
 import br.com.luan.myskeletonv2.extras.UnitConverterFactory
+
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -18,7 +19,7 @@ import com.google.gson.Gson
  */
 class ApiManager {
 
-    var endpoint = "http://app.bykestation.com.br/api/v1/"
+    var endpoint = "https://api.myjson.com/bins/"
     lateinit var context : Context
     var retrofit: Retrofit
     var okHttpClient: OkHttpClient

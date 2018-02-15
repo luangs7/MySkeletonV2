@@ -17,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ui.MainActivity"></activity>
+        <activity android:name=".view.ui.MainActivity" />
         <activity android:name=".view.ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,7 +47,9 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".view.ui.BaseDrawerActivity"></activity>
+        <activity android:name=".view.ui.BaseDrawerActivity" />
+        <activity android:name=".view.ui.ShowImageActivity" />
+        <activity android:name=".view.ui.ProductsActivity"></activity>
     </application>
 
 </manifest>

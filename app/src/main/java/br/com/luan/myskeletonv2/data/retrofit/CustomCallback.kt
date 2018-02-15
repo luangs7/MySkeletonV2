@@ -1,4 +1,4 @@
-package br.com.luan.myskeletonv2.data.retrofit
+package br.com.squarebits.myskeletonv2.data.retrofit
 
 import android.app.Activity
 import android.app.Dialog
@@ -19,13 +19,13 @@ import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import br.com.luan.myskeletonv2.R
-import br.com.luan.myskeletonv2.data.model.BaseRequest
-import br.com.luan.myskeletonv2.extras.Utils
+
 import dmax.dialog.SpotsDialog
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import br.com.luan.myskeletonv2.R
+import br.com.luan.myskeletonv2.data.model.BaseRequest
 import kotlinx.android.synthetic.main.progress_dialog_layout.view.*
 
 

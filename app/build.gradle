@@ -94,8 +94,8 @@ dependencies {
 
 
 
-    compile 'com.github.sharish:ShimmerRecyclerView:v1.0.1'
 
+    compile 'com.github.sharish:ShimmerRecyclerView:v1.0.1'
     compile 'com.github.sharish:ShimmerRecyclerView:v1.0.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -122,6 +122,9 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.slider:library:1.1.5@aar'
     compile 'com.iarcuschin:simpleratingbar:0.1.5'
+    compile 'com.github.sharish:ShimmerRecyclerView:v1.0.1'
+    compile 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
     testCompile 'junit:junit:4.12'
     debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
 }

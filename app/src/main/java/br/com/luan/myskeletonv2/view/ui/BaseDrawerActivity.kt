@@ -17,6 +17,9 @@ open class BaseDrawerActivity : BaseActivity(), NavigationView.OnNavigationItemS
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
+        if(id == R.id.home){
+            startActivity(ProductsActivity())
+        }
 
         this.drawer_layout.closeDrawer(GravityCompat.START)
         return true

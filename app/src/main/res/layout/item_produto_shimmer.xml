@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardElevation="2dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/shimmer_content"
+        xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/foto"
+                android:layout_width="156dp"
+                android:background="@color/demo_light_transparent"
+                android:layout_height="156dp" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:background="#bf3498"
+                android:id="@+id/lancamentoLayout"
+                android:layout_width="93dp"
+                android:layout_marginTop="-20dp"
+                android:layout_height="19sp"
+                android:layout_below="@+id/foto"
+                android:layout_alignStart="@+id/foto">
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Lançamento"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:textSize="13sp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:background="@color/demo_light_transparent"
+                android:textStyle="bold"
+                android:id="@+id/nomeProduto"
+                android:textColor="@color/demo_light_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="13sp"
+                android:ellipsize="end"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:background="@color/demo_light_transparent"
+                android:id="@+id/categoriaProduto"
+                android:textColor="#757575"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</android.support.v7.widget.CardView>
+

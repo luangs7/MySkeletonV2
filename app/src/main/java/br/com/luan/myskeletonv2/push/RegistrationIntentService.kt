@@ -3,15 +3,15 @@ package br.com.luan.myskeletonv2.push
 import android.app.IntentService
 import android.content.Context
 import android.content.Intent
-import br.com.luan.myskeletonv2.data.retrofit.ApiManager
-import br.com.luan.myskeletonv2.data.retrofit.CustomCallback
 import br.com.luan.myskeletonv2.extras.CustomGsonAdapter
 import android.provider.Settings.Secure;
 import android.util.Log
 import br.com.luan.myskeletonv2.data.model.Device
 import br.com.luan.myskeletonv2.data.model.MachineItem
-import br.com.luan.myskeletonv2.data.retrofit.RequestInterface
 import br.com.luan.myskeletonv2.extras.CpfCnpjMask.mListener
+import br.com.squarebits.myskeletonv2.data.retrofit.ApiManager
+import br.com.squarebits.myskeletonv2.data.retrofit.CustomCallback
+import br.com.squarebits.myskeletonv2.data.retrofit.RequestInterface
 
 import com.google.firebase.FirebaseApp
 import com.google.firebase.iid.FirebaseInstanceId
@@ -62,25 +62,25 @@ class RegistrationIntentService : IntentService(LOG) {
             val json = Gson().toJson(device)
             val body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), json)
 
-        ApiManager(context,false)
-                .retrofit
-                .create(RequestInterface::class.java)
-                .setRegister(body)
-                .enqueue(CustomCallback(context, object : CustomCallback.OnResponse<Void> {
-                    override fun onResponse(response: Void?) {
-                        Log.e("success","success")
-                    }
-
-                    override fun onFailure(t: Throwable?) {
-                        Log.e("errorDevice","erro")
-
-//                        mListener.onError(t!!.message!!)
-                    }
-
-                    override fun onRetry(t: Throwable?) {
-//                        getMachines()
-                    }
-                }))
+//        ApiManager(context,false)
+//                .retrofit
+//                .create(RequestInterface::class.java)
+//                .setRegister(body)
+//                .enqueue(CustomCallback(context, object : CustomCallback.OnResponse<Void> {
+//                    override fun onResponse(response: Void?) {
+//                        Log.e("success","success")
+//                    }
+//
+//                    override fun onFailure(t: Throwable?) {
+//                        Log.e("errorDevice","erro")
+//
+////                        mListener.onError(t!!.message!!)
+//                    }
+//
+//                    override fun onRetry(t: Throwable?) {
+////                        getMachines()
+//                    }
+//                }))
 
     }
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3c3c3c"
+    tools:context="br.com.squarebits.lausgirl.ui.view.products.ShowImageActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_marginTop="18dp"
+        android:id="@+id/toolbar"
+        app:navigationIcon="@drawable/ic_close_white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:elevation="4dp"
+        app:title=" "
+        style="@style/AppTheme.Toolbar"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    <br.com.luan.myskeletonv2.view.adapter.HackyViewPager
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewPager"
+        android:background="#3c3c3c"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+</RelativeLayout>
