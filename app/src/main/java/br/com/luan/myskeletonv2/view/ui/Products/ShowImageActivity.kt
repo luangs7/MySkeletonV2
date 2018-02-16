@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.content_main.*
 
 import java.io.File
 
-class ShowImageActivity : BaseActivity() {
+open class ShowImageActivity : BaseActivity() {
 
     internal var viewPager:ViewPager? = null
     lateinit var product: Product

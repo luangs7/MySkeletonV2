@@ -71,7 +71,7 @@
             <TextView
                 android:textSize="13sp"
                 android:ellipsize="end"
-                android:lines="2"
+                android:maxLines="2"
                 android:text="Categoria 01"
                 android:id="@+id/categoriaProduto"
                 android:textColor="#636363"

@@ -18,8 +18,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ui.MainActivity" />
-        <activity android:name=".view.ui.SplashActivity">
+        <activity android:name=".view.ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".view.ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,11 +53,27 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".view.ui.BaseDrawerActivity" />
-        <activity android:name=".view.ui.Products.ShowImageActivity" />
-        <activity android:name=".view.ui.FindMovie.ListaProdutoActivity"></activity>
-        <activity android:name=".view.ui.FindMovie.DetalhesProdutosActivity"></activity>
-        <activity android:name=".view.ui.FindMovie.MainActivity"></activity>
+        <activity android:name=".view.ui.BaseDrawerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".view.ui.Products.ProductsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".view.ui.Products.ShowImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".view.ui.FindMovie.ListaProdutoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".view.ui.FindMovie.DetalhesProdutosActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".view.ui.FindMovie.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".view.ui.ShimmerList.ShimmerListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
     </application>
 
 </manifest>
