@@ -23,6 +23,7 @@ class ProductsActivity : BaseDrawerActivity(), ProductRequestActivity.RequestLis
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products)
+        setSupportActionBar(toolbar)
 
         ProductRequestActivity(this@ProductsActivity, this@ProductsActivity).getProducts(0, false)
 

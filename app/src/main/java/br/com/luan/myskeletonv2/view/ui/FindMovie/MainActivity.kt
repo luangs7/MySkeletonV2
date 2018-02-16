@@ -54,11 +54,10 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         val toolbar = findViewById(R.id.toolbar) as Toolbar
-        if (toolbar != null) {
             toolbar.title = "Filmes"
             toolbar.setTitleTextColor(Color.parseColor("#2d2d2d"))
             setSupportActionBar(toolbar)
-        }
+
 
 
         maistodos!!.setOnClickListener { startActivity(Intent(baseContext, ListaProdutoActivity::class.java).putExtra("lista", "todos")) }

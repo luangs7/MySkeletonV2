@@ -5,6 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Produtos"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff"
+        android:elevation="4dp"
+        style="@style/AppTheme.Toolbar"
+        app:titleTextColor="@android:color/black"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,6 +68,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_height="match_parent"
         android:id="@+id/GridProdutosList"
-        />
+        android:layout_below="@+id/toolbar" />
 
 </RelativeLayout>
