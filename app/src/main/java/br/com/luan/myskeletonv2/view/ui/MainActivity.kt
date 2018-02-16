@@ -26,6 +26,8 @@ import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.R.color.drawer
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import nl.dionsegijn.konfetti.models.Shape
+import nl.dionsegijn.konfetti.models.Size
 
 
 class MainActivity : BaseDrawerActivity(){
@@ -77,6 +79,19 @@ class MainActivity : BaseDrawerActivity(){
         )
 
         //    <-------------------- END DRAWER ---------------------------->
+
+
+
+        viewKonfetti.build()
+                .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA, Color.CYAN, Color.DKGRAY)
+                .setDirection(0.0, 359.0)
+                .setSpeed(1f, 5f)
+                .setFadeOutEnabled(true)
+                .setTimeToLive(2000L)
+                .addShapes(Shape.RECT, Shape.CIRCLE)
+                .addSizes(Size(6))
+                .setPosition(-50f, viewKonfetti.width + 50f, -50f, -50f)
+                .stream(300, 5000L)
 
 
 //        startAnimationLaunch()

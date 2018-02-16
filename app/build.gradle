@@ -128,6 +128,8 @@ dependencies {
     compile 'com.iarcuschin:simpleratingbar:0.1.5'
     compile 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
     compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    compile 'nl.dionsegijn:konfetti:1.1.0'
+
     testCompile 'junit:junit:4.12'
     debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
 }
