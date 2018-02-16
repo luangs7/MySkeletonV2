@@ -6,6 +6,9 @@
             android:id="@+id/home"
             android:title="E commerce" />
         <item
+            android:id="@+id/findmovie"
+            android:title="Find Movie" />
+        <item
             android:id="@+id/shimmer"
             android:title="Shimmer List" />
         <item

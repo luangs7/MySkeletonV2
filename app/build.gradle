@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 25
@@ -125,6 +126,8 @@ dependencies {
     compile 'com.github.sharish:ShimmerRecyclerView:v1.0.1'
     compile 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
     compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
     testCompile 'junit:junit:4.12'
     debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
 }

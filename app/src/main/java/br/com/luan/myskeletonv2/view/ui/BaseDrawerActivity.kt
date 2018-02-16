@@ -6,6 +6,7 @@ import android.support.v4.view.GravityCompat
 import android.view.MenuItem
 
 import br.com.luan.myskeletonv2.R
+import br.com.luan.myskeletonv2.view.ui.FindMovie.MainActivity
 import br.com.luan.myskeletonv2.view.ui.Products.ProductsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,6 +20,9 @@ open class BaseDrawerActivity : BaseActivity(), NavigationView.OnNavigationItemS
         val id = item.itemId
         if(id == R.id.home){
             startActivity(ProductsActivity())
+        }
+        if(id == R.id.findmovie){
+            startActivity(MainActivity())
         }
 
         this.drawer_layout.closeDrawer(GravityCompat.START)

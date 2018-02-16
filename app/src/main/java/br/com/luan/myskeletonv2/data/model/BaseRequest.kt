@@ -2,7 +2,7 @@ package br.com.luan.myskeletonv2.data.model
 
 import com.google.gson.annotations.SerializedName
 
-class BaseRequest {
+open class BaseRequest {
 
     constructor()
 

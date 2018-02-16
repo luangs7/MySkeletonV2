@@ -76,7 +76,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_centerInParent="true"
                     android:rotation="320"
                     android:background="#d94a6f"
@@ -92,7 +92,7 @@
                         android:lines="1"
                         android:layout_marginRight="5dp"
                         android:layout_marginLeft="5dp"
-                        android:text="VENDIDO"
+                        android:text="LANÇAMENTO"
                         android:textColor="#ffffff"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />

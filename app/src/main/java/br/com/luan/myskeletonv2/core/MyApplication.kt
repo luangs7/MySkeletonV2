@@ -6,6 +6,7 @@ import android.net.ConnectivityManager
 import android.util.Log
 import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
+import io.realm.Realm
 
 
 /**
@@ -24,7 +25,7 @@ class MyApplication : Application() {
         super.onCreate()
         sInstance = this
 
-        //        Realm.init(this);
+                Realm.init(this);
 
                 try{
                     FirebaseApp.initializeApp(this);
