@@ -82,6 +82,14 @@ class MainActivity : BaseDrawerActivity(){
 
 
 
+        showKonfetti()
+
+        imageView2.setOnClickListener(View.OnClickListener { v: View? ->  showKonfetti()})
+
+//        startAnimationLaunch()
+    }
+
+    fun showKonfetti(){
         viewKonfetti.build()
                 .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA, Color.CYAN, Color.DKGRAY)
                 .setDirection(0.0, 359.0)
@@ -92,9 +100,6 @@ class MainActivity : BaseDrawerActivity(){
                 .addSizes(Size(6))
                 .setPosition(-50f, viewKonfetti.width + 50f, -50f, -50f)
                 .stream(300, 5000L)
-
-
-//        startAnimationLaunch()
     }
 
 

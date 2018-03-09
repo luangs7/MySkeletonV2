@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_bottom_alert.*
 
 class BottomAlertActivity : BaseActivity(), BottomDialogMessage.ConfirmClickListener {
 
-    internal var size:String = ""
+    internal var size:String = "wrap"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

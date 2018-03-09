@@ -18,7 +18,8 @@
     <color name="antiflash_white">#F3F2F4</color>
     <color name="chateaugreen">#37B24F</color>
     <color name="check">#8db22f</color>
-
+    <color name="demo_light_transparent">#16000000</color>
+    <color name="default_shimmer_color">#e3e1e3</color>
     <color name="start_active">#ffc600</color>
     <color name="start_desactive">#c1c1c1</color>
 </resources>

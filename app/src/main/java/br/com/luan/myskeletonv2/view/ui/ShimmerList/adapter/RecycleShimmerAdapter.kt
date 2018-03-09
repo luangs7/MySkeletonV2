@@ -9,7 +9,7 @@ import android.widget.*
 import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.extras.RecyclerViewOnClickListenerHack
 
-import com.facebook.shimmer.ShimmerFrameLayout
+import io.supercharge.shimmerlayout.ShimmerLayout
 import java.text.Normalizer
 import java.util.ArrayList
 
@@ -53,11 +53,11 @@ class RecycleShimmerAdapter(private val context: Context, private val layout:Int
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        internal var content: ShimmerFrameLayout?
+        internal var content: ShimmerLayout?
 
 
         init {
-            content = itemView.findViewById(R.id.shimmer_content) as ShimmerFrameLayout?
+            content = itemView.findViewById(R.id.shimmer_content) as ShimmerLayout?
 
         }
     }

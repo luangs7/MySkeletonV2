@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.*
 import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.extras.RecyclerViewOnClickListenerHack
-import com.facebook.shimmer.ShimmerFrameLayout
 import java.text.Normalizer
 import java.util.ArrayList
 
