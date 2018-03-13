@@ -21,10 +21,9 @@
         <item
             android:id="@+id/expandable"
             android:title="Expandable Layout" />
-        <!--like clickservices rating-->
         <item
-            android:id="@+id/coordinator"
-            android:title="Coordinator" />
+            android:id="@+id/parallax"
+            android:title="Parallax" />
         <item
             android:id="@+id/tabs"
             android:title="Tab Bar" />

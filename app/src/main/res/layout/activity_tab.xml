@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mContentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout"
+        app:title="@string/app_name"
+        app:titleEnabled="false"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#83bebebe"
+            style="@style/AppTheme.Toolbar"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_layout"
+            android:background="#83bebebe"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="0dp"
+            app:tabTextColor="#b2ffffff"
+            app:tabSelectedTextColor="#ffffff"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <br.com.luan.myskeletonv2.extras.CustomViewPager
+        android:id="@+id/pagerProducts"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff"
+        android:saveEnabled="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBarLayout">
+
+    </br.com.luan.myskeletonv2.extras.CustomViewPager>
+
+
+</android.support.design.widget.CoordinatorLayout>

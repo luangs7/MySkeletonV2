@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.facebook.shimmer.ShimmerFrameLayout
+<io.supercharge.shimmerlayout.ShimmerLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/shimmer"
@@ -84,4 +84,4 @@
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>
-</com.facebook.shimmer.ShimmerFrameLayout>
+</io.supercharge.shimmerlayout.ShimmerLayout>

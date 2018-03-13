@@ -103,7 +103,9 @@
             android:label="@string/title_activity_maps"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name=".view.ui.Expandable.ExpandableActivity"></activity>
+        <activity android:name=".view.ui.Expandable.ExpandableActivity" />
+        <activity android:name=".view.ui.Parallax.ParallaxActivity" />
+        <activity android:name=".view.ui.Tabs.TabActivity"></activity>
     </application>
 
 </manifest>
