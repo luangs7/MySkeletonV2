@@ -56,6 +56,9 @@ class ShimmerListActivity : BaseActivity(),ShimmerRequestActivity.RequestListene
         pedidosList.setAdapter(adapter)
         adapter.replace(myProducts)
 
+
+//        <------------- To add a clicklistener on list item -------------->
+
 //        adapter.addRecyclerViewOnClickListenerHack(object : RecyclerViewOnClickListenerHack {
 //            override fun onClickListener(view: View, `object`: Any, position: Int) {
 //                val produto = `object` as Order
@@ -112,7 +115,7 @@ class ShimmerListActivity : BaseActivity(),ShimmerRequestActivity.RequestListene
             override fun onQueryTextChange(query: String): Boolean {
                 adapter.getFilter().filter(query)
 
-                //                hideKeybord();
+                hideKeybord();
                 return true
             }
         })

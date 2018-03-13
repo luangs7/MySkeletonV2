@@ -38,23 +38,21 @@ import com.google.android.gms.maps.model.*
 import com.google.android.gms.tasks.OnSuccessListener
 import kotlinx.android.synthetic.main.activity_maps.*
 
-class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, DataRequestActivity.RequestListener, GoogleMap.OnMarkerClickListener {
+class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     lateinit var mapFragment: SupportMapFragment
     private var mMap: GoogleMap? = null
 
 
+    //constants
+    val longitude = "-49.2796956"
+    val latitute = "-25.4311664"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_maps)
 
         initView()
-        val servicegcm = Intent(baseContext, RegistrationIntentService::class.java)
-        startService(servicegcm)
-        this.nearby.visibility = View.GONE
-
-
-
     }
 
     override fun onResume() {
@@ -67,10 +65,13 @@ class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, DataRequestActiv
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        setSupportActionBar(this.toolbar)
+        this.nearby.visibility = View.GONE
+
+        //-----------  to adjust myposition button ----------------
+
 
 //        val mapView = mapFragment.getView()
-
-//        change mylocation button position
 
 //        if (mapView?.findViewById(Integer.parseInt("1")) != null) {
 //            // Get the button view
@@ -132,7 +133,7 @@ class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, DataRequestActiv
 
             client.getLastLocation().addOnSuccessListener(OnSuccessListener<Location> { location ->
                 try {
-                    val cameraZoom = 13
+                    val cameraZoom = 12
                     mLocation = location
                     var latLng = LatLng(location.getLatitude(), location.getLongitude());
                     mMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, cameraZoom.toFloat()));
@@ -159,23 +160,25 @@ class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, DataRequestActiv
 
 
     override fun onMarkerClick(marker: Marker?): Boolean {
-        onBottomSheetMessage(marker!!.tag as Machine)
+//        onBottomSheetMessage(marker!!.tag as Machine)
+        onBottomSheetMessage()
         return true
     }
 
-    fun addMarker(latitude: Double, longitude: Double, title: String, snip: String, obj: Machine) {
+    fun addMarker(latitude: Double, longitude: Double, title: String, snip: String) {
 
         var icon = BitmapFactory.decodeResource(this.getResources(),
-                R.drawable.pin);
+                R.mipmap.ic_launcher);
 
         options.position(LatLng(latitude, longitude))
         options.title(title)
         options.snippet(snip)
         options.icon(BitmapDescriptorFactory.fromBitmap(icon))
-        mMap!!.addMarker(options).tag = obj
+//        mMap!!.addMarker(options).tag = obj
+        mMap!!.addMarker(options)
         mMap!!.setOnMarkerClickListener(this)
         mMap!!.getUiSettings().setZoomControlsEnabled(true);
-        mMap!!.setPadding(0,0,0,280)
+//        mMap!!.setPadding(0,0,0,280)
 
         builder.include(LatLng(latitude, longitude))
 
@@ -198,7 +201,8 @@ class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, DataRequestActiv
 
                 override fun onAnimationEnd(animation: Animator) {
                     super.onAnimationEnd(animation)
-                    DataRequestActivity(this@MainActivity,this@MainActivity).getMachines()
+                    addMarker(latitute.toDouble(),longitude.toDouble(),"Praça Gen. Osório - Centro, Curitiba - PR ","")
+//                    DataRequestActivity(this@MainActivity,this@MainActivity).getMachines()
 
 
                 }
@@ -210,47 +214,40 @@ class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, DataRequestActiv
 
     var isNearbyShow:Boolean = false;
 
-    override fun onSuccess(machines: List<Machine>) {
-        if(machines.size > 0){
-            isNearbyShow = true
-            this.showNearby.setOnClickListener(View.OnClickListener {  onBottomSheetMessage(machines.get(0))})
-            this.closeNearby.setOnClickListener(View.OnClickListener {
-                this.nearby.visibility = View.GONE
-                isNearbyShow = false
-            })
-            this.nearby.visibility = View.VISIBLE
-            this.addressNearby.text = machines.get(0).locStreet
-            for (machine in machines){
-                if(machine.locLat != null && machine.locLong != null) {
-                    addMarker(machine.locLat!!.toDouble(),machine.locLong!!.toDouble(),machine.locName!!,"",machine)
-                }
-            }
-        }else{
-            isNearbyShow = false
-            this.nearby.visibility = View.GONE
-        }
+//    override fun onSuccess(machines: List<Machine>) {
+//        if(machines.size > 0){
+//            isNearbyShow = true
+//            this.showNearby.setOnClickListener(View.OnClickListener {  onBottomSheetMessage(machines.get(0))})
+//            this.closeNearby.setOnClickListener(View.OnClickListener {
+//                this.nearby.visibility = View.GONE
+//                isNearbyShow = false
+//            })
+//            this.nearby.visibility = View.VISIBLE
+//            this.addressNearby.text = machines.get(0).locStreet
+//            for (machine in machines){
+//                if(machine.locLat != null && machine.locLong != null) {
+//                    addMarker(machine.locLat!!.toDouble(),machine.locLong!!.toDouble(),machine.locName!!,"",machine)
+//                }
+//            }
+//        }else{
+//            isNearbyShow = false
+//            this.nearby.visibility = View.GONE
+//        }
+//
+//
+//        //--------------------------------
+//        isNearbyShow = false
+//        this.nearby.visibility = View.GONE
+//
+//
+//    }
+//
+//    override fun onError(error: String) {
+//        onErrorAlert(error)
+//    }
 
 
-        //--------------------------------
-        isNearbyShow = false
-        this.nearby.visibility = View.GONE
-
-
-    }
-
-
-    override fun onSuccessItens(itens: List<MachineItem>?) {
-    }
-
-    override fun onError(error: String) {
-        onErrorAlert(error)
-    }
-
-    override fun onSuccessDetails(itens: MachineItem) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    fun onBottomSheetMessage(machine: Machine) {
+    fun onBottomSheetMessage() {
         val view = layoutInflater.inflate(R.layout.window_map, null)
         val title = view.findViewById(R.id.title) as TextView
         val desc = view.findViewById(R.id.description) as TextView
@@ -258,8 +255,8 @@ class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, DataRequestActiv
         val itens = view.findViewById(R.id.itens) as RelativeLayout
         val rating = view.findViewById(R.id.rating) as Button
 
-        title.text = machine.locName
-        desc.text = machine.locStreet
+//        title.text = machine.locName
+//        desc.text = machine.locStreet
 
         val mBottomSheetDialog = Dialog(this, R.style.MaterialDialogSheet)
 
@@ -268,28 +265,32 @@ class MapsActivity : BaseDrawerActivity() , OnMapReadyCallback, DataRequestActiv
         mBottomSheetDialog.window!!.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
         mBottomSheetDialog.window!!.setGravity(Gravity.BOTTOM)
         mBottomSheetDialog.show()
-        bottomLayout.visibility = View.INVISIBLE
         this.nearby.visibility = View.GONE
 
-        rating.setOnClickListener(View.OnClickListener { startActivity(Intent(baseContext,RatingActivity::class.java).putExtra("machine",machine)) })
+        rating.setOnClickListener(View.OnClickListener {
+            onAlertMessage("Rating clicked!")
+
+//            startActivity(Intent(baseContext,RatingActivity::class.java).putExtra("machine",machine))
+        })
 
         route.setOnClickListener(View.OnClickListener {
-            setDirections(machine.locLat!!,machine.locLong!!)
+            setDirections(latitute,longitude)
+//            setDirections(machine.locLat!!,machine.locLong!!)
         })
 
         itens.setOnClickListener(View.OnClickListener {
-            startActivity(Intent(baseContext,ItensActivity::class.java).putExtra("machine",machine))
+            onAlertMessage("Itens clicked!")
+//            startActivity(Intent(baseContext,ItensActivity::class.java).putExtra("machine",machine))
         })
 
         mBottomSheetDialog.setOnCancelListener {
             getMyLocation()
-            bottomLayout.visibility = View.VISIBLE
             if(isNearbyShow)
                 this.nearby.visibility = View.VISIBLE
         }
 
-        var latLng = LatLng(machine.locLat!!.toDouble(),machine.locLong!!.toDouble());
-        var zoom = 17
+        var latLng = LatLng(latitute.toDouble(),longitude.toDouble());
+        var zoom = 12
 
         mMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom.toFloat()));
 

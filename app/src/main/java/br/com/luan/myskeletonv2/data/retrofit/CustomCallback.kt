@@ -86,14 +86,14 @@ class CustomCallback<T> : Callback<T> {
 
     constructor(activity: Activity,  Text: String, onResponse: OnResponse<T>)  {
         this.activity = activity
-        createProgress("Buscando dados...")
+        createProgress(Text)
         this.onResponse = onResponse
     }
 
 
     constructor(activity: Activity,  Text: String, viewLayout: View, onResponse: OnResponse<T>)  {
         this.activity = activity
-        createProgress("Buscando dados...")
+        createProgress(Text)
         this.onResponse = onResponse
         this.viewLayout = viewLayout
     }
@@ -178,7 +178,6 @@ class CustomCallback<T> : Callback<T> {
             else if (response.code() == 406) {
                 try {
                     error = response.errorBody().string()
-                    var message = ""
 
                     val jsnobject = JSONObject(error)
 
@@ -320,7 +319,8 @@ class CustomCallback<T> : Callback<T> {
         mBottomSheetDialog.show()
 
         positive.setOnClickListener(View.OnClickListener {
-            activity.finishAffinity()
+            if(clearTop)
+                activity.finishAffinity()
             activity.startActivity(Intent(activity,mActivity.javaClass))
 //            Utils().clearShared(activity)
             mBottomSheetDialog.dismiss()

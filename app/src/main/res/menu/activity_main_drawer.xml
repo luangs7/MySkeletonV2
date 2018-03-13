@@ -19,8 +19,8 @@
             android:id="@+id/location"
             android:title="Location" />
         <item
-            android:id="@+id/swipe"
-            android:title="Swipe Layout" />
+            android:id="@+id/expandable"
+            android:title="Expandable Layout" />
         <!--like clickservices rating-->
         <item
             android:id="@+id/coordinator"
@@ -33,7 +33,7 @@
             android:title="Push" />
         <item
             android:id="@+id/logout"
-            android:title="Home" />
+            android:title="About" />
 
     </group>
 

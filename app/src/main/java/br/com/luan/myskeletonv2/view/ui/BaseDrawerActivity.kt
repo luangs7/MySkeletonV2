@@ -7,9 +7,11 @@ import android.view.MenuItem
 
 import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.view.ui.BottomAlert.BottomAlertActivity
+import br.com.luan.myskeletonv2.view.ui.Expandable.ExpandableActivity
 import br.com.luan.myskeletonv2.view.ui.FindMovie.MainActivity
 import br.com.luan.myskeletonv2.view.ui.Products.ProductsActivity
 import br.com.luan.myskeletonv2.view.ui.ShimmerList.ShimmerListActivity
+import br.com.luan.myskeletonv2.view.ui.location.MapsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 open class BaseDrawerActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -31,6 +33,12 @@ open class BaseDrawerActivity : BaseActivity(), NavigationView.OnNavigationItemS
         }
         else if(id == R.id.bottomAlert){
             startActivity(BottomAlertActivity())
+        }
+        else if(id == R.id.location){
+            startActivity(MapsActivity())
+        }
+        else if(id == R.id.expandable){
+            startActivity(ExpandableActivity())
         }
 
         this.drawer_layout.closeDrawer(GravityCompat.START)

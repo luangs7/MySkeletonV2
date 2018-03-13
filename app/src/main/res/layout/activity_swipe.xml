@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:elevation="3dp"
+    android:id="@+id/content"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Location"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff"
+        android:elevation="4dp"
+        style="@style/AppTheme.Toolbar"
+        app:titleTextColor="@android:color/black"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+<RelativeLayout
+    android:layout_below="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="5"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginTop="-5dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4a494a"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="TextView"
+                    android:layout_toStartOf="@+id/arrow" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"
+                    android:id="@+id/arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icon_star"
+                    android:id="@+id/imageView4"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/profission"
+                    android:layout_width="match_parent"
+                    android:textColor="#a34a494a"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="TextView"
+                    android:layout_toEndOf="@+id/imageView4" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout2"
+        android:orientation="vertical"
+        app:ael_duration="400"
+        app:ael_expanded="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="match_parent">
+
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="30dp"
+                    app:srb_numberOfStars="5"
+                    app:srb_fillColor="#ffb400"
+                    app:srb_starBackgroundColor="#c1c1c1"
+                    app:srb_borderColor="@android:color/transparent"
+                    app:srb_stepSize="1"
+                    app:srb_isIndicator="true"
+                    android:id="@+id/preco"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/preco"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/preco"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Preço Justo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="match_parent">
+
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="30dp"
+                    app:srb_numberOfStars="5"
+                    app:srb_stepSize="1"
+                    app:srb_isIndicator="true"
+                    app:srb_fillColor="#ffb400"
+                    app:srb_starBackgroundColor="#c1c1c1"
+                    app:srb_borderColor="@android:color/transparent"
+                    android:id="@+id/prazo"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/prazo"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Prazo de entrega"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/prazo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="match_parent">
+
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="30dp"
+                    app:srb_numberOfStars="5"
+                    app:srb_isIndicator="true"
+                    app:srb_stepSize="1"
+                    android:id="@+id/quantidade"
+                    app:srb_fillColor="#ffb400"
+                    app:srb_starBackgroundColor="#c1c1c1"
+                    app:srb_borderColor="@android:color/transparent"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/quantidade"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Qualidade"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/quantidade" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="match_parent">
+
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="30dp"
+                    app:srb_isIndicator="true"
+                    app:srb_numberOfStars="5"
+                    app:srb_fillColor="#ffb400"
+                    app:srb_starBackgroundColor="#c1c1c1"
+                    app:srb_borderColor="@android:color/transparent"
+                    app:srb_stepSize="1"
+                    android:id="@+id/garantia"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/garantia"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Garantia"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/garantia" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_height="match_parent">
+
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="30dp"
+                    app:srb_numberOfStars="5"
+                    app:srb_isIndicator="true"
+                    app:srb_stepSize="1"
+                    app:srb_fillColor="#ffb400"
+                    app:srb_starBackgroundColor="#c1c1c1"
+                    app:srb_borderColor="@android:color/transparent"
+                    android:id="@+id/negociacao"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/negociacao"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Negociação"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/negociacao" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>
