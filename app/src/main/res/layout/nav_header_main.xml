@@ -28,7 +28,7 @@
             android:textColor="#fff"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:text="Visitante" />
+            android:text="Android" />
 
         <TextView
             android:id="@+id/email"
@@ -38,7 +38,7 @@
             android:textColor="#fff"
             android:textSize="14dp"
             android:paddingBottom="20dp"
-            android:text="Acesse sua conta" />
+            android:text="Veja algumas features" />
     </LinearLayout>
 
 
