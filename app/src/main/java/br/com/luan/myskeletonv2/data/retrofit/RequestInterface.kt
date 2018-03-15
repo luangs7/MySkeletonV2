@@ -29,5 +29,8 @@ interface RequestInterface {
     @GET("f0sw1")
     abstract fun getShimmerList(): Call<List<Order>>
 
+    @POST("send")
+    abstract fun sendPush(@HeaderMap headers: Map<String, String>,@Body json: RequestBody): Call<Void>
+
 
 }

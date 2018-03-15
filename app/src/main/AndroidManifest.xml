@@ -105,7 +105,10 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".view.ui.Expandable.ExpandableActivity" />
         <activity android:name=".view.ui.Parallax.ParallaxActivity" />
-        <activity android:name=".view.ui.Tabs.TabActivity"></activity>
+        <activity android:name=".view.ui.Tabs.TabActivity" />
+        <activity android:name=".view.ui.Push.PushActivity" />
+        <activity android:name=".view.ui.Realm.ChatActivity" />
+        <activity android:name=".view.ui.Realm.ContactsActivity"></activity>
     </application>
 
 </manifest>

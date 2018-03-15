@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.luan.myskeletonv2.view.ui.Realm.ContactsActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Contatos"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff"
+        android:elevation="4dp"
+        style="@style/AppTheme.Toolbar"
+        app:titleTextColor="@android:color/black"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contactsList"
+        android:layout_below="@+id/toolbar"></ListView>
+
+
+</RelativeLayout>

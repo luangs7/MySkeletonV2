@@ -11,6 +11,8 @@ import br.com.luan.myskeletonv2.view.ui.Expandable.ExpandableActivity
 import br.com.luan.myskeletonv2.view.ui.FindMovie.MainActivity
 import br.com.luan.myskeletonv2.view.ui.Parallax.ParallaxActivity
 import br.com.luan.myskeletonv2.view.ui.Products.ProductsActivity
+import br.com.luan.myskeletonv2.view.ui.Push.PushActivity
+import br.com.luan.myskeletonv2.view.ui.Realm.ContactsActivity
 import br.com.luan.myskeletonv2.view.ui.ShimmerList.ShimmerListActivity
 import br.com.luan.myskeletonv2.view.ui.Tabs.TabActivity
 import br.com.luan.myskeletonv2.view.ui.location.MapsActivity
@@ -33,6 +35,8 @@ open class BaseDrawerActivity : BaseActivity(), NavigationView.OnNavigationItemS
             R.id.expandable -> startActivity(ExpandableActivity())
             R.id.parallax -> startActivity(ParallaxActivity())
             R.id.tabs -> startActivity(TabActivity())
+            R.id.push -> startActivity(PushActivity())
+            R.id.realm -> startActivity(ContactsActivity())
             else -> startActivity(MainActivity())
             }
 

@@ -31,8 +31,8 @@
             android:id="@+id/push"
             android:title="Push" />
         <item
-            android:id="@+id/logout"
-            android:title="About" />
+            android:id="@+id/realm"
+            android:title="Chat using Realm" />
 
     </group>
 

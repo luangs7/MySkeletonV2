@@ -103,7 +103,7 @@ open class BaseActivity : AppCompatActivity(), GeneralPresenter.ActivityPresente
 
 
     override
-    fun onAlertDialogMessage(title: String, text: String, mActivity: Activity) {
+    fun onAlertDialogMessage(title: String, text: String) {
         val builder = AlertDialog.Builder(this, R.style.AppTheme_AlertDialog)
         builder.setTitle(title)
         builder.setMessage(text)

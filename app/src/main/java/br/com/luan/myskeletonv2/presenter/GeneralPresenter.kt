@@ -14,7 +14,7 @@ class GeneralPresenter {
         fun onEmpty()
         fun onErrorAlert(erro: String)
         fun onAlertMessage(msg: String)
-        fun onAlertDialogMessage(title: String, text: String, mActivity: Activity)
+        fun onAlertDialogMessage(title: String, text: String)
         fun onAlertDialogMessageFinish(title: String, text: String, mActivity: Activity)
         fun onProgressShow()
         fun onProgressDismiss()

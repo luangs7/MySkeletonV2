@@ -45,11 +45,11 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             Log.d(TAG, "Message data payload: " + remoteMessage.data)
             remoteMessage.notification
 
-            sendNotification(remoteMessage.data["text"])
+            sendNotification(remoteMessage.data["title"],remoteMessage.data["text"])
         } else if (remoteMessage.notification != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.notification.body!!)
             remoteMessage.notification
-            sendNotification(remoteMessage.notification.body)
+            sendNotification(remoteMessage.notification.title,remoteMessage.notification.body)
         }
 
 
@@ -61,7 +61,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
      *
      * @param messageBody FCM message body received.
      */
-    private fun sendNotification(messageBody: String?) {
+    private fun sendNotification(title: String?,messageBody: String?) {
         val intent: Intent
 
             intent = Intent(this, MainActivity::class.java)
@@ -75,7 +75,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val notificationBuilder = NotificationCompat.Builder(this)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setColor(resources.getColor(R.color.colorPrimary))
-                .setContentTitle(resources.getString(R.string.app_name))
+                .setContentTitle(title)
                 .setContentText(messageBody)
                 .setStyle(NotificationCompat.BigTextStyle().bigText(messageBody))
                 .setAutoCancel(autoCancel)
