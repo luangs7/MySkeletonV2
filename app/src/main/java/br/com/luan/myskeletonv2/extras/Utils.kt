@@ -119,6 +119,11 @@ class Utils {
            shakeEditText(currentField,context)
        }
 
+        fun isEmailValid(email: CharSequence): Boolean {
+            return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
+                    .matches()
+        }
+
         val currentTimeMonthAndYear: String
             get() {
                 val date = System.currentTimeMillis()
@@ -134,10 +139,6 @@ class Utils {
             return dateFormat.format(date)
         }
 
-        fun isEmailValid(email: CharSequence): Boolean {
-            return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
-                    .matches()
-        }
 
         fun isPasswordValid(editText: EditText): Boolean{
             if(editText.text.toString().length > 5){
