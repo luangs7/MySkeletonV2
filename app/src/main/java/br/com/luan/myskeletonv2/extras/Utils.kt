@@ -3,7 +3,6 @@ package br.com.luan.myskeletonv2.extras
 import android.content.Context
 import android.view.View
 import android.widget.EditText
-import android.widget.ListView
 import br.com.luan.myskeletonv2.utils.shakeView
 
 
@@ -44,10 +43,6 @@ class Utils {
 
 
     companion object {
-
-
-
-
 
         fun checkEmpty(editText: EditText): Boolean {
             return if (editText.text.trim().length < 0)

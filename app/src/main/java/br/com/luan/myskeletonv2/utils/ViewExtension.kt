@@ -2,9 +2,14 @@ package br.com.luan.myskeletonv2.utils
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.support.annotation.LayoutRes
 import android.support.design.widget.Snackbar
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ListView
+import com.squareup.picasso.Picasso
 
 /**
  * Created by luan silva on 19/04/18.
@@ -58,3 +63,7 @@ fun <T : View> T.click(block: (T) -> Unit) = setOnClickListener { block(it as T)
 
 fun <T : View> T.longClick(block: (T) -> Boolean) = setOnLongClickListener { block(it as T) }
 
+fun ViewGroup.inflate(@LayoutRes layoutRes: Int) =
+        LayoutInflater.from(context).inflate(layoutRes, this, false)
+
+fun ImageView.loadUrl(url: String) = Picasso.with(context).load(url).into(this)
