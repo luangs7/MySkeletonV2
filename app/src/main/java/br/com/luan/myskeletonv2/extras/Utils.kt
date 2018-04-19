@@ -1,7 +1,6 @@
 package br.com.luan.myskeletonv2.extras
 
 import android.content.Context
-import android.view.View
 import android.widget.EditText
 import br.com.luan.myskeletonv2.utils.shakeView
 
@@ -12,43 +11,10 @@ import br.com.luan.myskeletonv2.utils.shakeView
 
 class Utils {
 
-    var contentView: View? = null
-
-    constructor(contentView: View) {
-        this.contentView = contentView
-    }
-
-    constructor() {}
-
-//    fun getSharedAuth(context: Context): User? {
-//        return LocalDbImplement<User>(context).getDefault(User::class.java) as? User
-//    }
-//
-//    fun setShared(context: Context, `object`: User) {
-//        LocalDbImplement<User>(context).save(`object`)
-//    }
-//
-//    fun getSharedCar(context: Context): Car? {
-//        return LocalDbImplement<Car>(context).getDefault(Car::class.java) as? Car
-//    }
-//
-//    fun setShared(context: Context, `object`: Car) {
-//        LocalDbImplement<Car>(context).save(`object`)
-//    }
-//
-//    fun clearShared(context: Context) {
-//        LocalDbImplement<User>(context).clearObject(User::class.java)
-//        LocalDbImplement<Car>(context).clearObject(Car::class.java)
-//    }
-
-
     companion object {
 
         fun checkEmpty(editText: EditText): Boolean {
-            return if (editText.text.trim().length < 0)
-                true
-            else
-                false
+            return editText.text.trim().length < 0
         }
 
         fun checkEmptyMultiple(editTexts: Array<EditText>): Boolean {
