@@ -1,13 +1,12 @@
 package br.com.luan.myskeletonv2.view.ui.Realm
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-
-import br.com.luan.myskeletonv2.R
-import br.com.luan.myskeletonv2.view.ui.BaseDrawerActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.data.realm.RealmHelper
+import br.com.luan.myskeletonv2.utils.onErrorAlert
+import br.com.luan.myskeletonv2.view.ui.BaseDrawerActivity
 import br.com.luan.myskeletonv2.view.ui.Realm.adapter.ChatRecycleAdapter
 import br.com.luan.myskeletonv2.view.ui.Realm.model.Constants
 import br.com.luan.myskeletonv2.view.ui.Realm.model.Contact

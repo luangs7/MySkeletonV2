@@ -12,6 +12,7 @@ import br.com.luan.myskeletonv2.data.model.Resource
 import br.com.luan.myskeletonv2.data.request.ProductRequestActivity
 import br.com.luan.myskeletonv2.extras.EndlessRecyclerViewScrollListener
 import br.com.luan.myskeletonv2.extras.RecyclerViewOnClickListenerHack
+import br.com.luan.myskeletonv2.utils.onErrorAlert
 import br.com.luan.myskeletonv2.view.adapter.RecycleProdutoListaAdapter
 import br.com.luan.myskeletonv2.view.ui.BaseDrawerActivity
 import kotlinx.android.synthetic.main.activity_products.*

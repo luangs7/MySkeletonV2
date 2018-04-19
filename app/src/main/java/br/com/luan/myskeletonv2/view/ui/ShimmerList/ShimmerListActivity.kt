@@ -1,8 +1,8 @@
 package br.com.luan.myskeletonv2.view.ui.ShimmerList
 
+
 import android.app.SearchManager
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -14,16 +14,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.data.request.ShimmerRequestActivity
-import br.com.luan.myskeletonv2.extras.RecyclerViewOnClickListenerHack
+import br.com.luan.myskeletonv2.utils.onErrorAlert
 import br.com.luan.myskeletonv2.view.ui.BaseActivity
-import br.com.luan.myskeletonv2.view.ui.BaseDrawerActivity
 import br.com.luan.myskeletonv2.view.ui.ShimmerList.adapter.RecycleProdutoPedidoAdapter
 import br.com.luan.myskeletonv2.view.ui.ShimmerList.adapter.RecycleShimmerAdapter
 import br.com.luan.myskeletonv2.view.ui.ShimmerList.model.Order
 import kotlinx.android.synthetic.main.activity_pedido_list.*
-
-
-import kotlin.collections.ArrayList
 
 class ShimmerListActivity : BaseActivity(),ShimmerRequestActivity.RequestListener {
     

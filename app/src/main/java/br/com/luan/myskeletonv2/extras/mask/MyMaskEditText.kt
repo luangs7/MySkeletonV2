@@ -1,52 +1,28 @@
-package br.com.luan.myskeletonv2.extras
+package br.com.luan.myskeletonv2.extras.mask
 
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 
 /**
- * Created by Luan on 09/05/17.
+ * Created by Luan on 31/07/17.
  */
 
-class SuperBrazilianTelephoneMask(var editText: EditText) : TextWatcher {
+class MyMaskEditText(var editText: EditText, protected var mMask: String) : TextWatcher {
 
-    protected var isUpdating: Boolean = false
+
+    private var isUpdating: Boolean = false
     protected var mOldString = ""
-    lateinit protected var mMask: String
-
     internal var befores = ""
-
 
     override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
         befores = s.toString().replace("[^\\d]".toRegex(), "")
+
     }
 
     override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
         var str = s.toString().replace("[^\\d]".toRegex(), "")
 
-        /*String old = "";
-        String mascara = "";
-        if (isUpdating) {
-            old = str;
-            isUpdating = false;
-            return;
-        }
-        int i = 0;
-        for (char m : mMask.toCharArray()) {
-            if (m != '#' && str.length() > old.length()) {
-                mascara += m;
-                continue;
-            }
-            try {
-                mascara += str.charAt(i);
-            } catch (Exception e) {
-                break;
-            }
-            i++;
-        }
-        isUpdating = true;
-        editText.setText(mascara);
-        editText.setSelection(mascara.length());*/
         if (str.length == 0) {
             return
         }
@@ -59,11 +35,6 @@ class SuperBrazilianTelephoneMask(var editText: EditText) : TextWatcher {
             }
         }
 
-        if (str.length > 10) {
-            mMask = DEFAULT_BRAZIL_MASK_NEW
-        } else {
-            mMask = DEFAULT_BRAZIL_MASK
-        }
 
         val mask = StringBuilder()
         if (isUpdating) {
@@ -89,15 +60,10 @@ class SuperBrazilianTelephoneMask(var editText: EditText) : TextWatcher {
         val x = mask.toString()
         editText.setText(x)
         editText.setSelection(mask.length)
+
     }
 
     override fun afterTextChanged(s: Editable) {
 
-    }
-
-    companion object {
-
-        val DEFAULT_BRAZIL_MASK_NEW = "(##) #####-####"
-        val DEFAULT_BRAZIL_MASK = "(##) ####-####"
     }
 }

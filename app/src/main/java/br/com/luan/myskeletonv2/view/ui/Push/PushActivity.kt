@@ -1,11 +1,10 @@
 package br.com.luan.myskeletonv2.view.ui.Push
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-
 import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.data.request.FirebaseRequestActivity
+import br.com.luan.myskeletonv2.utils.onAlertDialogMessage
 import br.com.luan.myskeletonv2.view.ui.BaseDrawerActivity
 import br.com.luan.myskeletonv2.view.ui.Push.model.FirebaseNotification
 import br.com.luan.myskeletonv2.view.ui.Push.model.Notification

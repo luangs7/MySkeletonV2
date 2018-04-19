@@ -1,4 +1,4 @@
-package br.com.luan.myskeletonv2.extras
+package br.com.luan.myskeletonv2.extras.mask
 
 import android.text.Editable
 import android.text.TextWatcher

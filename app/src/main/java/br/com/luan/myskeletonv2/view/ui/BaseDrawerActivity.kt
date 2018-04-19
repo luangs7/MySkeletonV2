@@ -6,6 +6,7 @@ import android.support.v4.view.GravityCompat
 import android.view.MenuItem
 
 import br.com.luan.myskeletonv2.R
+import br.com.luan.myskeletonv2.utils.startActivity
 import br.com.luan.myskeletonv2.view.ui.BottomAlert.BottomAlertActivity
 import br.com.luan.myskeletonv2.view.ui.Expandable.ExpandableActivity
 import br.com.luan.myskeletonv2.view.ui.FindMovie.MainActivity
@@ -22,6 +23,7 @@ open class BaseDrawerActivity : BaseActivity(), NavigationView.OnNavigationItemS
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -38,7 +40,7 @@ open class BaseDrawerActivity : BaseActivity(), NavigationView.OnNavigationItemS
             R.id.push -> startActivity(PushActivity())
             R.id.realm -> startActivity(ContactsActivity())
             else -> startActivity(MainActivity())
-            }
+        }
 
 
         this.drawer_layout.closeDrawer(GravityCompat.START)

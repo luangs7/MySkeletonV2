@@ -1,4 +1,4 @@
-package br.com.luan.myskeletonv2.extras
+package br.com.luan.myskeletonv2.extras.mask
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,21 +8,21 @@ import android.widget.EditText
  * Created by Luan on 31/07/17.
  */
 
-class LicenseVehicleMask(var editText: EditText) : TextWatcher {
+class CepBrazilianEdittextMask(var editText: EditText) : TextWatcher {
 
 
     private var isUpdating: Boolean = false
     protected var mOldString = ""
-    protected var mMask: String?= ""
+    protected var mMask: String = ""
     internal var befores = ""
 
     override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-        befores = s.toString()
+        befores = s.toString().replace("[^\\d]".toRegex(), "")
 
     }
 
     override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-        var str = s.toString()
+        var str = s.toString().replace("[^\\d]".toRegex(), "")
 
         if (str.length == 0) {
             return
@@ -36,7 +36,7 @@ class LicenseVehicleMask(var editText: EditText) : TextWatcher {
             }
         }
 
-        mMask = DEFAULT_MASK
+        mMask = DEFAULT_BRAZIL_MASK
 
         val mask = StringBuilder()
         if (isUpdating) {
@@ -45,7 +45,7 @@ class LicenseVehicleMask(var editText: EditText) : TextWatcher {
             return
         }
         var i = 0
-        for (m in mMask!!.toCharArray()) {
+        for (m in mMask.toCharArray()) {
             if (m != '#') {
                 mask.append(m)
                 continue
@@ -71,6 +71,6 @@ class LicenseVehicleMask(var editText: EditText) : TextWatcher {
 
     companion object {
 
-        val DEFAULT_MASK = "###-####"
+        val DEFAULT_BRAZIL_MASK = "#####-###"
     }
 }

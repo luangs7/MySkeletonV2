@@ -1,4 +1,4 @@
-package br.com.luan.myskeletonv2.extras
+package br.com.luan.myskeletonv2.extras.mask
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,20 +8,21 @@ import android.widget.EditText
  * Created by Luan on 31/07/17.
  */
 
-class MyMaskEditText(var editText: EditText, protected var mMask: String) : TextWatcher {
+class LicenseVehicleMask(var editText: EditText) : TextWatcher {
 
 
     private var isUpdating: Boolean = false
     protected var mOldString = ""
+    protected var mMask: String?= ""
     internal var befores = ""
 
     override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-        befores = s.toString().replace("[^\\d]".toRegex(), "")
+        befores = s.toString()
 
     }
 
     override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-        var str = s.toString().replace("[^\\d]".toRegex(), "")
+        var str = s.toString()
 
         if (str.length == 0) {
             return
@@ -35,6 +36,7 @@ class MyMaskEditText(var editText: EditText, protected var mMask: String) : Text
             }
         }
 
+        mMask = DEFAULT_MASK
 
         val mask = StringBuilder()
         if (isUpdating) {
@@ -43,7 +45,7 @@ class MyMaskEditText(var editText: EditText, protected var mMask: String) : Text
             return
         }
         var i = 0
-        for (m in mMask.toCharArray()) {
+        for (m in mMask!!.toCharArray()) {
             if (m != '#') {
                 mask.append(m)
                 continue
@@ -65,5 +67,10 @@ class MyMaskEditText(var editText: EditText, protected var mMask: String) : Text
 
     override fun afterTextChanged(s: Editable) {
 
+    }
+
+    companion object {
+
+        val DEFAULT_MASK = "###-####"
     }
 }

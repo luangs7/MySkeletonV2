@@ -1,12 +1,11 @@
 package br.com.luan.myskeletonv2.view.ui.BottomAlert
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.CompoundButton
-
 import br.com.luan.myskeletonv2.R
 import br.com.luan.myskeletonv2.extras.BottomDialogMessage
+import br.com.luan.myskeletonv2.utils.onAlertMessage
 import br.com.luan.myskeletonv2.view.ui.BaseActivity
 import kotlinx.android.synthetic.main.activity_bottom_alert.*
 

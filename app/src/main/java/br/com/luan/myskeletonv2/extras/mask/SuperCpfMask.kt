@@ -1,4 +1,4 @@
-package br.com.luan.myskeletonv2.extras
+package br.com.luan.myskeletonv2.extras.mask
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -33,11 +33,11 @@ object SuperCpfMask {
             internal var oldValue = ""
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                val value = SuperCpfMask.unmask(s.toString())
+                val value = unmask(s.toString())
                 val mask: String
                 when (maskType) {
-                    SuperCpfMask.MaskType.CPF -> mask = CPFMask
-                    SuperCpfMask.MaskType.CNPJ -> mask = CNPJMask
+                    MaskType.CPF -> mask = CPFMask
+                    MaskType.CNPJ -> mask = CNPJMask
 //                    else -> mask = getDefaultMask(value)
                 }
 

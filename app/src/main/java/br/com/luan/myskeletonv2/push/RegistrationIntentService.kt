@@ -3,21 +3,13 @@ package br.com.luan.myskeletonv2.push
 import android.app.IntentService
 import android.content.Context
 import android.content.Intent
-import br.com.luan.myskeletonv2.extras.CustomGsonAdapter
 import android.provider.Settings.Secure;
 import android.util.Log
 import br.com.luan.myskeletonv2.data.model.Device
-import br.com.luan.myskeletonv2.data.model.MachineItem
-import br.com.luan.myskeletonv2.extras.CpfCnpjMask.mListener
-import br.com.squarebits.myskeletonv2.data.retrofit.ApiManager
-import br.com.squarebits.myskeletonv2.data.retrofit.CustomCallback
-import br.com.squarebits.myskeletonv2.data.retrofit.RequestInterface
 
 import com.google.firebase.FirebaseApp
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.gson.Gson
-
-import java.util.HashMap
 
 
 import okhttp3.MediaType

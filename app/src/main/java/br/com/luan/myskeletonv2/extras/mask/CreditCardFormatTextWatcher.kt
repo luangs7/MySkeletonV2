@@ -1,4 +1,4 @@
-package br.com.luan.myskeletonv2.extras
+package br.com.luan.myskeletonv2.extras.mask
 
 /**
  * Created by Luan on 24/07/17.

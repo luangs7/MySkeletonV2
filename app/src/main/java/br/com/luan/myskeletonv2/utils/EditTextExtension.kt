@@ -1,28 +1,32 @@
 package br.com.luan.myskeletonv2.utils
 
+import android.text.method.PasswordTransformationMethod
+import android.view.View.OnFocusChangeListener
 import android.view.animation.AnimationUtils
 import android.widget.EditText
 import br.com.luan.myskeletonv2.R
-
+import br.com.luan.myskeletonv2.extras.mask.MyMaskEditText
+import br.com.luan.myskeletonv2.extras.mask.SuperBrazilianTelephoneMask
+import java.util.regex.Pattern
 /**
  * Created by luan gabriel on 16/04/18.
  */
 
 
-fun EditText.textTrim():String{
+fun EditText.textTrim(): String {
     return this.text.toString().trim()
 }
 
-fun EditText.getText():String{
+fun EditText.getTextString(): String {
     return this.text.toString()
 }
 
-fun EditText.shakeView(){
+fun EditText.shakeView() {
     val shake = AnimationUtils.loadAnimation(context, R.anim.shake)
     this.startAnimation(shake)
 }
 
-fun EditText.isPasswordValid(maxLenght:Int):Boolean{
+fun EditText.isPasswordValid(maxLenght: Int): Boolean {
     return this.textTrim().length > maxLenght
 }
 
@@ -30,7 +34,7 @@ fun EditText.checkEmpty(editText: EditText): Boolean {
     return editText.text.trim().length < 0
 }
 
-fun EditText.checkEdittextError(error:String){
+fun EditText.checkEdittextError(error: String) {
     this.error = error
     this.setFocusableInTouchMode(true)
     this.requestFocus()
@@ -42,33 +46,43 @@ fun EditText.isEmailValid(): Boolean {
             .matches()
 }
 
+fun EditText.isLicensePlate(): Boolean {
+    val m = Pattern.compile("[A-Z]{3}\\d{4}").matcher(this.getTextString().replace("-", "").toUpperCase())
+
+    return m.find()
+}
+
+fun EditText.validCep(): Boolean {
+    val pattern = Pattern.compile("^[0-9]{5}-[0-9]{3}$")
+    val matcher = pattern.matcher(this.getTextString())
+    return matcher.find()
+}
+
+fun EditText.checkCep(completion: () -> Unit){
+    this.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+        if (!hasFocus) {
+            if(this.validCep()){
+                completion()
+            }
+        }
+    }
+}
 
 
-//fun EditText.checkEmptyMultiple(editTexts: Array<EditText>): Boolean {
-//
-//    for (currentField in editTexts) {
-//        if (currentField.text.toString().length <= 0) {
-//            return true
-//        }
-//    }
-//    return false
-//}
-//
-//fun checkEmptyMultipleWithError(editTexts: ArrayList<EditText>, context: Context): Boolean {
-//    var hasEmpty:Boolean =false
-//    val wrongs: ArrayList<EditText> = ArrayList()
-//    for (currentField in editTexts) {
-//        if (currentField.text.toString().length <= 0) {
-//            currentField.error = "Esse campo não pode ser vazio!"
-//            shakeEditText(currentField,context)
-//            hasEmpty = true
-//            wrongs.add(currentField)
-//        }
-//    }
-//    if(wrongs.size > 0) {
-//        wrongs.get(0).setFocusableInTouchMode(true)
-//        wrongs.get(0).requestFocus()
-//    }
-//    return hasEmpty
-//}
+fun EditText.passwordToggledVisible() {
+    val selection = selectionStart
+    transformationMethod = if (transformationMethod == null) PasswordTransformationMethod() else null
+    setSelection(selection)
+}
 
+fun EditText.addCPFMask() {
+//    this.addTextChangedListener(CpfCnpjMask.insert(this,this))
+}
+
+fun EditText.addCEPMask() {
+    this.addTextChangedListener(MyMaskEditText(this, "#####-###"))
+}
+
+fun EditText.addPhoneMask() {
+    this.addTextChangedListener(SuperBrazilianTelephoneMask(this))
+}

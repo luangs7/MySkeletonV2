@@ -1,4 +1,4 @@
-package br.com.luan.myskeletonv2.extras
+package br.com.luan.myskeletonv2.extras.mask
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -31,7 +31,7 @@ object CpfCnpjMask {
             internal var old = ""
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                val str = CpfCnpjMask.unmask(s.toString())
+                val str = unmask(s.toString())
                 val mask: String
                 val defaultMask = getDefaultMask(str)
                 if(str.length == 11){
